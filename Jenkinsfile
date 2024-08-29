@@ -1,9 +1,7 @@
 pipeline {
-    agent any
-    triggers {
-        githubPush()
     agent { label 'master' }
-    
+    triggers {
+        githubPush()    
     environment {
         //CONFIG
 		URL_SSC = "http://10.30.100.80:8281/ssc"
